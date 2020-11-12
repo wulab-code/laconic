@@ -128,11 +128,6 @@ for k = 1:length(dirname)
             m_dC = filtercellareas([region_m(:).Area],0.5*m_area,lm_dC);
             m_dC = m_dC .* li_dC;
             
-    %         ims = cat(2,imresize(venusimage,targetimsize),li_dC);
-            figure(1)
-            imagesc(venusimage)
-            figure(2)
-            imagesc(li_dC)
             bwlabelim = li_dC;
             
             parsave(fullfile(dirname(k).name,dirname(k).subdir(j).name,[zerostr(5,i-1) '.mat']), bwlabelim);
